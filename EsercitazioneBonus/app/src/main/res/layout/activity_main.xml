@@ -70,7 +70,18 @@
                 android:background="@android:color/holo_orange_light"
                 android:text="@string/accedi"
                 android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/labelLostPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="@string/lostpassword"
+                android:textSize="18sp" />
         </LinearLayout>
+
+
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
