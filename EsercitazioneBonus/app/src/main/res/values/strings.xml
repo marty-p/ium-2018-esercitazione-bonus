@@ -5,4 +5,7 @@
     <string name="lostpassword"><a href='example.com'>Password dimenticata?</a></string>
     <string name="username">Username</string>
     <string name="login">Login</string>
+    <string name="profilo">Profilo</string>
+    <string name="indietro">Indietro</string>
+    <string name="benvenuto_username">Benvenuto username</string>
 </resources>
