@@ -30,7 +30,7 @@ public class FormResultActivity extends AppCompatActivity {
 
         // check password mismatch
         String c = credentials.get(username);
-        if (c != password)
+        if (!c.equals(password))
             return false;
 
         return true;
