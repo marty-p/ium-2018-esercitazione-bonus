@@ -3,16 +3,20 @@ package marty.esercitazionebonus;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     EditText inputUsername;
     EditText inputPassword;
     Button btnAccedi;
-    // TextView textErrors;
+    // TextView labelErrors;
+    TextView labelLostPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +26,13 @@ public class MainActivity extends AppCompatActivity {
         inputUsername = this.findViewById(R.id.inputUsername);
         inputPassword = this.findViewById(R.id.inputPassword);
 
-        //textErrors = this.findViewById(R.id.textErrors);
-        //textErrors.setVisibility(View.GONE); // must be displayed only when there are errors
+        //labelErrors = this.findViewById(R.id.labelErrors);
+        //labelErrors.setVisibility(View.GONE); // must be displayed only when there are errors
+
+        // linkable textview with "a href"
+        labelLostPassword = this.findViewById(R.id.labelLostPassword);
+        labelLostPassword.setMovementMethod(LinkMovementMethod.getInstance());
+        labelLostPassword.setText(Html.fromHtml(labelLostPassword.getText().toString()));
 
         btnAccedi = this.findViewById(R.id.btnAccedi);
         btnAccedi.setOnClickListener(new View.OnClickListener() {
@@ -49,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             hasErrors = true;
         }
         //if (hasErrors)
-        //    textErrors.setVisibility(View.VISIBLE);
+        //    labelErrors.setVisibility(View.VISIBLE);
 
         return !hasErrors; // true if no errors
     }

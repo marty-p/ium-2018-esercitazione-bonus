@@ -2,7 +2,7 @@
     <string name="app_name">EsercitazioneBonus</string>
     <string name="accedi">Accedi</string>
     <string name="password">Password</string>
-    <string name="lostpassword"><a href='example.com'>Password dimenticata?</a></string>
+    <string name="lostpassword">&lt;a href=http://example.com&gt;Password dimenticata?&lt;/a&gt;</string>
     <string name="username">Username</string>
     <string name="login">Login</string>
     <string name="profilo">Profilo</string>
