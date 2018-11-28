@@ -39,8 +39,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (checkInput()) {
-                    Intent showResults = new Intent(MainActivity.this, FormResultActivity.class);
-                    startActivity(showResults);
+                    Intent intent = new Intent(MainActivity.this, FormResultActivity.class);
+                    // add data inside intent
+                    intent.putExtra("username", inputUsername.getText().toString());
+                    intent.putExtra("password", inputPassword.getText().toString());
+                    startActivity(intent);
                 }
             }
         });
