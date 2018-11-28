@@ -43,8 +43,9 @@ public class FormResultActivity extends AppCompatActivity {
 
         // get data from intent
         Bundle bundle = getIntent().getExtras();
-        String username = bundle.getString("username");
-        String password = bundle.getString("password");
+        String username = bundle.getString(getString(R.string.key_username));
+        String password = bundle.getString(getString(R.string.key_password));
+
         // process data
         labelWelcome = this.findViewById(R.id.labelWelcome);
         if (checkCredentials(username, password)) {
@@ -56,7 +57,7 @@ public class FormResultActivity extends AppCompatActivity {
             labelWelcome.setTextColor(Color.RED);
         }
 
-        // bottone che torna indietro alla activity principale
+        // button that goes back to the main activity
         btnIndietro = this.findViewById(R.id.btnIndietro);
         btnIndietro.setOnClickListener(new View.OnClickListener() {
             @Override

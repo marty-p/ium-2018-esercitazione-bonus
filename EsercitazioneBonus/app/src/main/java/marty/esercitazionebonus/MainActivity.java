@@ -41,8 +41,9 @@ public class MainActivity extends AppCompatActivity {
                 if (checkInput()) {
                     Intent intent = new Intent(MainActivity.this, FormResultActivity.class);
                     // add data inside intent
-                    intent.putExtra("username", inputUsername.getText().toString());
-                    intent.putExtra("password", inputPassword.getText().toString());
+                    intent.putExtra(getString(R.string.key_username), inputUsername.getText().toString());
+                    intent.putExtra(getString(R.string.key_password), inputPassword.getText().toString());
+                    // run login activity
                     startActivity(intent);
                 }
             }
@@ -54,18 +55,18 @@ public class MainActivity extends AppCompatActivity {
         boolean hasErrors = false;
         // check username
         if (inputUsername.getText().length()==0) {
-            inputUsername.setError("Inserisci l'username");
+            inputUsername.setError(getString(R.string.insert_username));
             hasErrors = true;
         }
         // check password
         if (inputPassword.getText().length()==0) {
-            inputPassword.setError("Inserisci la password");
+            inputPassword.setError(getString(R.string.insert_password));
             hasErrors = true;
         }
 
-        if (hasErrors) // mostra il label se ha errori
+        if (hasErrors) // show the error label if it has errors
             labelErrors.setVisibility(View.VISIBLE);
-        else // nascondi altrimenti
+        else // hide it otherwise
             labelErrors.setVisibility(View.GONE);
 
         return !hasErrors; // true if no errors

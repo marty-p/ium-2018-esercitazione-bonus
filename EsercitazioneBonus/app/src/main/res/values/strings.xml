@@ -12,4 +12,8 @@
     <string name="ci_sono_degli_errori">Ci sono degli errori nel form!</string>
     <string name="welcome_fmt">Benvenuto %s</string>
     <string name="access_denied">Accesso negato</string>
+    <string name="key_username">username</string>
+    <string name="key_password">password</string>
+    <string name="insert_username">Inserisci l\'username</string>
+    <string name="insert_password">Inserisci la password</string>
 </resources>
