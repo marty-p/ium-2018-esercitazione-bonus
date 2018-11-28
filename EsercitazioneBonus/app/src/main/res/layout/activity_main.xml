@@ -84,12 +84,12 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/labelLostPassword"
+                android:id="@+id/labelRegistrati"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
-                android:text="@string/lostpassword"
+                android:text="@string/registrati"
                 android:textSize="18sp" />
         </LinearLayout>
 

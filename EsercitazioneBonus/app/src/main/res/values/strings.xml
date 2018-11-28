@@ -3,10 +3,11 @@
     <string name="accedi">Accedi</string>
     <string name="password">Password</string>
     <string name="lostpassword">&lt;a href=http://example.com&gt;Password dimenticata?&lt;/a&gt;</string>
+    <string name="registrati">&lt;a href=http://example.com&gt;Nessun account? Registrati ora!&lt;/a&gt;</string>
     <string name="username">Username</string>
     <string name="login">Login</string>
     <string name="profilo">Profilo</string>
     <string name="indietro">Indietro</string>
     <string name="benvenuto_username">Benvenuto username</string>
-    <string name="ci_sono_degli_errori">Ci sono degli errori!</string>
+    <string name="ci_sono_degli_errori">Ci sono degli errori nel form!</string>
 </resources>

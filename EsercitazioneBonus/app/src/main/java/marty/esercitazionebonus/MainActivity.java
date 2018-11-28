@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     EditText inputPassword;
     Button btnAccedi;
     TextView labelErrors;
-    TextView labelLostPassword;
+    TextView labelRegistrati;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
         labelErrors.setVisibility(View.GONE); // must be displayed only when there are errors
 
         // linkable textview with "a href"
-        labelLostPassword = this.findViewById(R.id.labelLostPassword);
-        labelLostPassword.setMovementMethod(LinkMovementMethod.getInstance());
-        labelLostPassword.setText(Html.fromHtml(labelLostPassword.getText().toString()));
+        labelRegistrati = this.findViewById(R.id.labelRegistrati);
+        labelRegistrati.setMovementMethod(LinkMovementMethod.getInstance());
+        labelRegistrati.setText(Html.fromHtml(labelRegistrati.getText().toString()));
 
         btnAccedi = this.findViewById(R.id.btnAccedi);
         btnAccedi.setOnClickListener(new View.OnClickListener() {
