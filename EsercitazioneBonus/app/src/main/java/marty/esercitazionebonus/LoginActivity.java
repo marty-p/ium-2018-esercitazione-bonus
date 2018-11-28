@@ -11,7 +11,7 @@ import android.widget.TextView;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FormResultActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     TextView labelWelcome;
     Button btnIndietro;
 
@@ -62,7 +62,7 @@ public class FormResultActivity extends AppCompatActivity {
         btnIndietro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FormResultActivity.this, MainActivity.class);
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
