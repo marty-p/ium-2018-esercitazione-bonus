@@ -8,4 +8,5 @@
     <string name="profilo">Profilo</string>
     <string name="indietro">Indietro</string>
     <string name="benvenuto_username">Benvenuto username</string>
+    <string name="ci_sono_degli_errori">Ci sono degli errori!</string>
 </resources>

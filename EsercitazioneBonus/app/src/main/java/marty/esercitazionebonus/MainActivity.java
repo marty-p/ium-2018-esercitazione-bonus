@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     EditText inputUsername;
     EditText inputPassword;
     Button btnAccedi;
-    // TextView labelErrors;
+    TextView labelErrors;
     TextView labelLostPassword;
 
     @Override
@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
         inputUsername = this.findViewById(R.id.inputUsername);
         inputPassword = this.findViewById(R.id.inputPassword);
 
-        //labelErrors = this.findViewById(R.id.labelErrors);
-        //labelErrors.setVisibility(View.GONE); // must be displayed only when there are errors
+        labelErrors = this.findViewById(R.id.labelErrors);
+        labelErrors.setVisibility(View.GONE); // must be displayed only when there are errors
 
         // linkable textview with "a href"
         labelLostPassword = this.findViewById(R.id.labelLostPassword);
@@ -49,16 +49,21 @@ public class MainActivity extends AppCompatActivity {
     //! @brief it returns true if there are no errors
     private boolean checkInput() {
         boolean hasErrors = false;
+        // check username
         if (inputUsername.getText().length()==0) {
             inputUsername.setError("Inserisci l'username");
             hasErrors = true;
         }
+        // check password
         if (inputPassword.getText().length()==0) {
             inputPassword.setError("Inserisci la password");
             hasErrors = true;
         }
-        //if (hasErrors)
-        //    labelErrors.setVisibility(View.VISIBLE);
+
+        if (hasErrors) // mostra il label se ha errori
+            labelErrors.setVisibility(View.VISIBLE);
+        else // nascondi altrimenti
+            labelErrors.setVisibility(View.GONE);
 
         return !hasErrors; // true if no errors
     }

@@ -26,6 +26,18 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/labelErrors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:text="@string/ci_sono_degli_errori"
+                android:textSize="30sp"
+                android:background="@android:color/holo_red_light"
+                android:textColor="@android:color/holo_red_dark"
+                />
+
+            <TextView
                 android:id="@+id/labelUsername"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
