@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (checkInput()) {
-                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                    Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
                     // add data inside intent
                     intent.putExtra(getString(R.string.key_username), inputUsername.getText().toString());
                     intent.putExtra(getString(R.string.key_password), inputPassword.getText().toString());
