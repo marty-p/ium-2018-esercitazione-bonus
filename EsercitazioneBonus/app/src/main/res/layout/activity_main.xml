@@ -53,7 +53,7 @@
                 android:layout_margin="5dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:hint="your username" />
+                android:hint="@string/your_username" />
 
             <TextView
                 android:id="@+id/labelPassword"
@@ -71,7 +71,7 @@
                 android:layout_margin="5dp"
                 android:ems="10"
                 android:inputType="textPassword"
-                android:hint="your password" />
+                android:hint="@string/your_password" />
 
             <Button
                 android:id="@+id/btnAccedi"

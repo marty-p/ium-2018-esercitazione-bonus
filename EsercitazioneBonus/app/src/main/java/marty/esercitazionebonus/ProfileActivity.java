@@ -2,9 +2,8 @@ package marty.esercitazionebonus;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -12,10 +11,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ProfileActivity extends AppCompatActivity {
-    TextView labelWelcome;
-    Button btnIndietro;
+    private TextView labelWelcome;
+    private Button btnIndietro;
 
-    boolean checkCredentials(String username, String password) {
+    private boolean checkCredentials(String username, String password) {
         // offline db
         final Map<String, String> credentials = new HashMap<String, String>() {
             {
@@ -24,16 +23,9 @@ public class ProfileActivity extends AppCompatActivity {
             }
         };
 
-        // check user existence
-        if (!credentials.containsKey(username))
-            return false;
-
         // check password mismatch
         String c = credentials.get(username);
-        if (!c.equals(password))
-            return false;
-
-        return true;
+        return c != null && c.equals(password);
     }
 
     @Override
@@ -42,9 +34,9 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_form_result);
 
         // get data from intent
-        Bundle bundle = getIntent().getExtras();
-        String username = bundle.getString(getString(R.string.key_username));
-        String password = bundle.getString(getString(R.string.key_password));
+        Intent intent = getIntent();
+        String username = intent.getStringExtra(getString(R.string.key_username));
+        String password = intent.getStringExtra(getString(R.string.key_password));
 
         // process data
         labelWelcome = this.findViewById(R.id.labelWelcome);
@@ -59,11 +51,6 @@ public class ProfileActivity extends AppCompatActivity {
 
         // button that goes back to the main activity
         btnIndietro = this.findViewById(R.id.btnIndietro);
-        btnIndietro.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        btnIndietro.setOnClickListener(v -> finish());
     }
 }

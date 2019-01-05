@@ -12,11 +12,11 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText inputUsername;
-    EditText inputPassword;
-    Button btnAccedi;
-    TextView labelErrors;
-    TextView labelRegistrati;
+    private EditText inputUsername;
+    private EditText inputPassword;
+    private Button btnAccedi;
+    private TextView labelErrors;
+    private TextView labelRegistrati;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,17 +35,14 @@ public class MainActivity extends AppCompatActivity {
         labelRegistrati.setText(Html.fromHtml(labelRegistrati.getText().toString()));
 
         btnAccedi = this.findViewById(R.id.btnAccedi);
-        btnAccedi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (checkInput()) {
-                    Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
-                    // add data inside intent
-                    intent.putExtra(getString(R.string.key_username), inputUsername.getText().toString());
-                    intent.putExtra(getString(R.string.key_password), inputPassword.getText().toString());
-                    // run login activity
-                    startActivity(intent);
-                }
+        btnAccedi.setOnClickListener(v -> {
+            if (checkInput()) {
+                Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+                // add data inside intent
+                intent.putExtra(getString(R.string.key_username), inputUsername.getText().toString());
+                intent.putExtra(getString(R.string.key_password), inputPassword.getText().toString());
+                // run login activity
+                startActivity(intent);
             }
         });
     }
