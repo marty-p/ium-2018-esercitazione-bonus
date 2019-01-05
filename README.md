@@ -1,5 +1,16 @@
 # Esercitazione Bonus
+--------------
+Lista utenti:
 
+```
+admin
+123456
+
+user
+querty
+```
+
+--------------
 ##### Scadenza: 15/01/19
 
 Per l’esercitazione bonus (facoltativa) dovrete implementare un’applicazione Android composto da un form di login semplificato, che permetta a un utente di loggarsi inserendo username e password. 
