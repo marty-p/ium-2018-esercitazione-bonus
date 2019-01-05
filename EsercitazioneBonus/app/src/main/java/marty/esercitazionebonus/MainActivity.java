@@ -1,9 +1,11 @@
 package marty.esercitazionebonus;
 
 import android.content.Intent;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
+import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +19,14 @@ public class MainActivity extends AppCompatActivity {
     private Button btnAccedi;
     private TextView labelErrors;
     private TextView labelRegistrati;
+
+    @SuppressWarnings("deprecation")
+    public static Spanned fromHtml(String source) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
+            return Html.fromHtml(source, Html.FROM_HTML_MODE_LEGACY);
+        else
+            return Html.fromHtml(source);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         // linkable textview with "a href"
         labelRegistrati = this.findViewById(R.id.labelRegistrati);
         labelRegistrati.setMovementMethod(LinkMovementMethod.getInstance());
-        labelRegistrati.setText(Html.fromHtml(labelRegistrati.getText().toString()));
+        labelRegistrati.setText(fromHtml(labelRegistrati.getText().toString()));
 
         btnAccedi = this.findViewById(R.id.btnAccedi);
         btnAccedi.setOnClickListener(v -> {
