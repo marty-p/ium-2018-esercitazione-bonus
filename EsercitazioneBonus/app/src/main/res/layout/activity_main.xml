@@ -29,13 +29,12 @@
                 android:id="@+id/labelErrors"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_margin="10dp"
-                android:text="@string/ci_sono_degli_errori"
-                android:textSize="30sp"
                 android:background="@android:color/holo_red_light"
+                android:gravity="center"
+                android:text="@string/ci_sono_degli_errori"
                 android:textColor="@android:color/holo_red_dark"
-                />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/labelUsername"
@@ -44,7 +43,7 @@
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:text="@string/username"
-                android:textSize="30sp"/>
+                android:textSize="24sp" />
 
             <EditText
                 android:id="@+id/inputUsername"
@@ -52,8 +51,10 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:ems="10"
+                android:hint="@string/your_username"
                 android:inputType="textPersonName"
-                android:hint="@string/your_username" />
+                android:paddingLeft="8sp"
+                android:paddingRight="8sp" />
 
             <TextView
                 android:id="@+id/labelPassword"
@@ -62,7 +63,7 @@
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:text="@string/password"
-                android:textSize="30sp" />
+                android:textSize="24sp" />
 
             <EditText
                 android:id="@+id/inputPassword"
@@ -70,8 +71,10 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:ems="10"
+                android:hint="@string/your_password"
                 android:inputType="textPassword"
-                android:hint="@string/your_password" />
+                android:paddingLeft="8sp"
+                android:paddingRight="8sp" />
 
             <Button
                 android:id="@+id/btnAccedi"

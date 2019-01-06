@@ -24,14 +24,14 @@
             android:textSize="36sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/labelWelcome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:text="@string/benvenuto_username"
-            android:textSize="30sp"/>
+            <TextView
+                android:id="@+id/labelWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="@string/benvenuto_username"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/btnIndietro"
