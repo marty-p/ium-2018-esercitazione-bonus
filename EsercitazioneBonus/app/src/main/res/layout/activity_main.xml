@@ -89,7 +89,10 @@
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:text="@string/registrati"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:autoLink="all"
+                android:linksClickable="false"
+                android:selectAllOnFocus="false" />
         </LinearLayout>
 
 </ScrollView>

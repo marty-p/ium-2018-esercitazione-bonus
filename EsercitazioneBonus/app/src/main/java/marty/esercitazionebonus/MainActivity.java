@@ -18,15 +18,6 @@ public class MainActivity extends AppCompatActivity {
     private EditText inputPassword;
     private Button btnAccedi;
     private TextView labelErrors;
-    private TextView labelRegistrati;
-
-    @SuppressWarnings("deprecation")
-    public static Spanned fromHtml(String source) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
-            return Html.fromHtml(source, Html.FROM_HTML_MODE_LEGACY);
-        else
-            return Html.fromHtml(source);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,11 +29,6 @@ public class MainActivity extends AppCompatActivity {
 
         labelErrors = this.findViewById(R.id.labelErrors);
         labelErrors.setVisibility(View.GONE); // must be displayed only when there are errors
-
-        // linkable textview with "a href"
-        labelRegistrati = this.findViewById(R.id.labelRegistrati);
-        labelRegistrati.setMovementMethod(LinkMovementMethod.getInstance());
-        labelRegistrati.setText(fromHtml(labelRegistrati.getText().toString()));
 
         btnAccedi = this.findViewById(R.id.btnAccedi);
         btnAccedi.setOnClickListener(v -> {
