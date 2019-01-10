@@ -53,8 +53,8 @@
                 android:ems="10"
                 android:hint="@string/your_username"
                 android:inputType="textPersonName"
-                android:paddingLeft="8sp"
-                android:paddingRight="8sp" />
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" />
 
             <TextView
                 android:id="@+id/labelPassword"
@@ -73,8 +73,8 @@
                 android:ems="10"
                 android:hint="@string/your_password"
                 android:inputType="textPassword"
-                android:paddingLeft="8sp"
-                android:paddingRight="8sp" />
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" />
 
             <Button
                 android:id="@+id/btnAccedi"
