@@ -32,45 +32,53 @@
                 android:textColor="@android:color/holo_red_dark"
                 android:textSize="30sp" />
 
-            <TextView
+            <android.support.design.widget.TextInputLayout
                 android:id="@+id/labelUsername"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="10dp"
-                android:text="@string/username"
-                android:textSize="24sp" />
-
-            <EditText
-                android:id="@+id/inputUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:ems="10"
-                android:hint="@string/your_username"
-                android:inputType="textPersonName"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp" />
+                app:hintTextAppearance="@style/HintTextLabelLayout">
 
-            <TextView
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/inputUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="@string/username"
+                    android:paddingLeft="8sp"
+                    android:paddingRight="8sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
                 android:id="@+id/labelPassword"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="10dp"
-                android:text="@string/password"
-                android:textSize="24sp" />
-
-            <EditText
-                android:id="@+id/inputPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:ems="10"
-                android:hint="@string/your_password"
-                android:inputType="textPassword"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp" />
+                app:hintTextAppearance="@style/HintTextLabelLayout"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorAccent">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/inputPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:hint="@string/password"
+                    android:paddingLeft="8sp"
+                    android:paddingRight="8sp" />
+
+            </android.support.design.widget.TextInputLayout>
 
             <Button
                 android:id="@+id/btnAccedi"

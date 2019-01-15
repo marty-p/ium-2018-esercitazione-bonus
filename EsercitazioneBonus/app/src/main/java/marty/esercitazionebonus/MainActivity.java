@@ -2,6 +2,7 @@ package marty.esercitazionebonus;
 
 import android.content.Intent;
 import android.os.Build;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
@@ -14,6 +15,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private TextInputLayout labelUsername;
+    private TextInputLayout labelPassword;
     private EditText inputUsername;
     private EditText inputPassword;
     private Button btnAccedi;
@@ -32,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        labelUsername = this.findViewById(R.id.labelUsername);
+        labelPassword = this.findViewById(R.id.labelPassword);
 
         inputUsername = this.findViewById(R.id.inputUsername);
         inputPassword = this.findViewById(R.id.inputPassword);
@@ -60,14 +66,16 @@ public class MainActivity extends AppCompatActivity {
     //! @brief it returns true if there are no errors
     private boolean checkInput() {
         boolean hasErrors = false;
+        labelUsername.setError(null);
+        labelPassword.setError(null);
         // check username
         if (inputUsername.getText().length()==0) {
-            inputUsername.setError(getString(R.string.insert_username));
+            labelUsername.setError(getString(R.string.insert_username));
             hasErrors = true;
         }
         // check password
         if (inputPassword.getText().length()==0) {
-            inputPassword.setError(getString(R.string.insert_password));
+            labelPassword.setError(getString(R.string.insert_password));
             hasErrors = true;
         }
 
