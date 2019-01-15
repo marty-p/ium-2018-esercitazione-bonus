@@ -10,6 +10,9 @@ user
 querty
 ```
 
+Url icona:
+https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html#foreground.type=text&foreground.text.text=EsBonus&foreground.text.font=Aclonica&foreground.space.trim=1&foreground.space.pad=0.5&foreColor=rgb(0%2C%2080%2C%20116)&backColor=rgb(58%2C%20219%2C%20238)&crop=0&backgroundShape=square&effects=none&name=ic_launcher
+
 --------------
 ##### Scadenza: 15/01/19
 
